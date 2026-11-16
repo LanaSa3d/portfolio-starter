@@ -58,7 +58,6 @@
       var defaults = { palette: 'mizan', laptop: 'code', phone: 'apps' };
       var saved = {};
       try { saved = JSON.parse(localStorage.getItem('yara_tweaks') || '{}') || {}; } catch (e) {}
-      if (!saved.palette && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) saved.palette = 'night';
       window.__tweaks = Object.assign({}, defaults, saved);
       // Same values as PALETTES in src/layout.jsx — applied here to avoid a flash of the wrong theme.
       var palettes = {
