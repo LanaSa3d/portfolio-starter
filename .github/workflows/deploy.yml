@@ -1,5 +1,6 @@
-# Builds the site and publishes it to GitHub Pages on every push to main.
-# One-time setup: repo Settings → Pages → Source: "GitHub Actions".
+# Tests, builds and publishes the site to GitHub Pages on every push to main.
+# One-time setup in the fork: Actions tab → enable workflows, then
+# Settings → Pages → Source: "GitHub Actions".
 name: Deploy to GitHub Pages
 
 on:
@@ -26,15 +27,20 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm test
       - name: Build
         run: npm run build
         env:
-          # Your site lives at https://<username>.github.io/<repo-name>/
-          # Using a custom domain or a <username>.github.io repo? Set this to "".
-          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+          # Site lives at https://<owner>.github.io/<repo-name>/
+          VITE_BASE: /${{ github.event.repository.name }}/
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+      - name: SPA fallback for deep links (/projects/<slug>)
+        run: |
+          cp dist/index.html dist/404.html
+          touch dist/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./dist
 
   deploy:
     needs: build

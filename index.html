@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yara Al-Mansouri | Principal Product Engineer</title>
+  <meta name="description"
+    content="Yara Saud Al-Mansouri, PhD: Principal Product Engineer, Design Technology Lead and HCI Researcher in Riyadh. Design systems, Arabic-first interfaces and products used by over 9 million people." />
+  <meta name="theme-color" content="#f3f0e6" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="canonical" href="__SITE_URL__" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Yara Al-Mansouri" />
+  <meta property="og:title" content="Yara Al-Mansouri | Principal Product Engineer" />
+  <meta property="og:description"
+    content="Design systems, Arabic-first interfaces and products used by over 9 million people. 16 years, 40+ products, a PhD in HCI." />
+  <meta property="og:url" content="__SITE_URL__" />
+  <meta property="og:image" content="__SITE_URL__og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Yara Al-Mansouri, Principal Product Engineer, Design Technology Lead and HCI Researcher" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yara Al-Mansouri | Principal Product Engineer" />
+  <meta name="twitter:description" content="Design systems, Arabic-first interfaces and products used by over 9 million people." />
+  <meta name="twitter:image" content="__SITE_URL__og-image.png" />
+  <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+  <link rel="apple-touch-icon" href="%BASE_URL%apple-touch-icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yara Saud Al-Mansouri",
+    "honorificSuffix": "PhD",
+    "jobTitle": "Principal Product Engineer",
+    "worksFor": { "@type": "Organization", "name": "Faseela Ventures" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Riyadh", "addressCountry": "SA" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Eastmoor Institute of Technology" },
+      { "@type": "CollegeOrUniversity", "name": "University of Northbridge" },
+      { "@type": "CollegeOrUniversity", "name": "Najd Valley University" }
+    ],
+    "knowsAbout": ["Product Design", "Design Systems", "Front-End Engineering", "Accessibility", "Arabic right-to-left interfaces", "Human-Computer Interaction"],
+    "knowsLanguage": ["ar", "en", "fr", "de", "tr"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;600&display=swap"
+    rel="stylesheet">
+  <!-- Tweaks + theme: restored before React boots so there is no colour flash. -->
+  <script>
+    (function () {
+      var language = localStorage.getItem('yara_lang') === 'ar' ? 'ar' : 'en';
+      document.documentElement.lang = language;
+      document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+      var defaults = { palette: 'mizan', laptop: 'code', phone: 'apps' };
+      var saved = {};
+      try { saved = JSON.parse(localStorage.getItem('yara_tweaks') || '{}') || {}; } catch (e) {}
+      if (!saved.palette && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) saved.palette = 'night';
+      window.__tweaks = Object.assign({}, defaults, saved);
+      // Same values as PALETTES in src/layout.jsx — applied here to avoid a flash of the wrong theme.
+      var palettes = {
+        mizan: ['#f3f0e6', '#e8e4d6', '#1f2a24', '#4c5a50', '#2f6b4f', '#a9c9b3', '#2c3a31'],
+        night: ['#121815', '#1a221d', '#e6eee7', '#a3b3a7', '#7cc49a', '#2f5a42', '#5f7466'],
+        sand:  ['#f4ede0', '#ebe1cf', '#2a2520', '#5a4f44', '#a8532f', '#e2b39a', '#3a2f26']
+      };
+      var names = ['--paper', '--paper-2', '--ink', '--ink-soft', '--accent', '--accent-soft', '--line'];
+      var p = palettes[window.__tweaks.palette] || palettes.mizan;
+      for (var i = 0; i < names.length; i++) document.documentElement.style.setProperty(names[i], p[i]);
+      document.documentElement.dataset.theme = window.__tweaks.palette === 'night' ? 'dark' : 'light';
+    })();
+  </script>
+</head>
+
+<body>
+  <noscript>
+    <p style="padding:24px;font-family:Georgia,serif">This portfolio needs JavaScript. Yara Saud Al-Mansouri, PhD · Principal Product Engineer · yara.almansouri@mail.example</p>
+  </noscript>
+  <div class="grain" aria-hidden="true"></div>
+  <div id="root"></div>
+
+  <!-- Tweaks panel — opened from the "tweaks" card on the desk; built by tweaks.jsx -->
+  <div id="tweaks" class="tweaks-panel" role="dialog" aria-label="Customize the desk">
+    <div class="tweaks-head">
+      <h3>Tweaks</h3>
+      <button type="button" id="tw-close" class="icon-btn" aria-label="Close tweaks">✕</button>
+    </div>
+    <label>Palette</label>
+    <div class="row" id="tw-palette"></div>
+    <label>Laptop screen</label>
+    <div class="row" id="tw-laptop"></div>
+    <label>Phone screen</label>
+    <div class="row" id="tw-phone"></div>
+  </div>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

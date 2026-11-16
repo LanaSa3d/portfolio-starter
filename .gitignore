@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Vite
+/dist
+
+# local agent / editor config (never commit)
+.[c]laude/
+[C]LAUDE.md
+AGENTS.md
+HANDOFF.md
