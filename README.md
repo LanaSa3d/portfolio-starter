@@ -3,7 +3,7 @@
 **Live site:** `https://LanaSa3d.github.io/portfolio-starter/`
 
 Portfolio Summit 2026 submission (GDG on Campus × KABi, Al Yamamah University).
-Team: **Team 4** · Members: Lana Saad, Aseel Nofal, Elia Alsaqqa, Layan Alzahrani.
+Team: **Team 13** · Members: Lana Saad, Aseel Nofal, Elia Alsaqqa, Layan Alzahrani.
 
 The site turns the fictional CV provided by the organizers (Yara Saud Al-Mansouri, PhD) into an interactive portfolio: an illustrated top-down desk you can click around, followed by her career told as a story.
 
