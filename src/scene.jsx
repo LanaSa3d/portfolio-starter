@@ -32,12 +32,12 @@ const DEFAULT_POSITIONS = {
   social:    { x: 0, y: 0, rot: 0 },
   // Desk objects (offsets from their drawn position)
   laptop:   { x: 223.8, y: -7.1,  rot: 0 },
-  phone:    { x: -270, y: -144.8, rot: 0 },
-  camera:   { x: -8,  y: -36.4, rot: 0 },
-  inkpot:   { x: -45, y: 0, rot: 0 },
-  medal:    { x: 0, y: 0, rot: 0 },
-  chess:    { x: 0, y: 0, rot: 0 },
-  notebook: { x: -875, y: -60.4, rot: 0 },
+  phone:    { x: -160, y: -144.8, rot: 0 },
+  camera:   { x: 120, y: -36.4, rot: 0 },
+  inkpot:   { x: 20, y: 0, rot: 0 },
+  medal:    { x: 0, y: -26, rot: 0 },
+  chess:    { x: 98, y: 0, rot: 0 },
+  notebook: { x: -920, y: -60.4, rot: 0 },
   mug:      { x: -670.1, y: -42.6, rot: 0 },
   desk:     { x: 22.2,  y: 76.4,  rot: 0 },
 };
